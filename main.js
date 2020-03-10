@@ -41,10 +41,12 @@ let key_private = new NodeRSA(private_key);
 let key_public = new NodeRSA(public_key);
 
 var encryptedString = key_public.encrypt(secret, 'base64');
-console.log(encryptedString);
 
-console.log('\n------------------------------------------------------------------------------------------------------------------------------------\n')
+console.log('\n-----------------------------------------------------------------\n');
+console.log("Mensagem cifrada: " + encryptedString);
+console.log('\n-----------------------------------------------------------------\n');
 
 var decryptedString = key_private.decrypt(encryptedString, 'utf8');
-console.log(decryptedString)
 
+console.log("Mensagem decifrada: " + decryptedString);
+console.log('\n-----------------------------------------------------------------\n');
